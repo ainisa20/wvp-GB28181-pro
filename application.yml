@@ -97,7 +97,7 @@ media:
     # [可选] 国标级联在此范围内选择端口发送媒体流,
     send-port-range: 30000,30300 # 端口范围
   # 录像辅助服务， 部署此服务可以实现zlm录像的管理与下载， 0 表示不使用
-  record-assist-port: 18081
+  record-assist-port: 0
 # [根据业务需求配置]
 user-settings:
   # 点播/录像回放 等待超时时间,单位：毫秒
@@ -117,3 +117,9 @@ user-settings:
     - http://127.0.0.1:8000
     - http://127.0.0.1:5000
 
+  # 关闭在线文档（生产环境建议关闭）
+  springdoc:
+      api-docs:
+          enabled: false
+      swagger-ui:
+          enabled: false
